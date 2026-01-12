@@ -18,8 +18,8 @@
     />
   </head>
   <body>
-    <!-- ==== START OF NAVIGATION BAR ==== -->
-    <div>
+    <!-- ==== (PREVIOUS NAVIGATION BAR) ==== -->
+    <!-- <div>
       <nav
         class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top"
       >
@@ -90,19 +90,121 @@
           </div>
         </div>
       </nav>
-    </div>
+    </div> -->
     <!-- ==== END OF NAVIGATION BAR ==== -->
 
-    <!-------------------------- HEADER BANNER -------------------------->
-    <img
-      src="media assets/background.png"
-      alt="PWD Banner"
-      class="home-banner"
-    />
-    <!-------------------------- END HEADER --------------------------->
+    <!----- site navbar ----->
+    <nav class="site-nav">
+      <button class="sidebar-toggle">
+        <span class="material-symbols-rounded"
+          ><img src="media assets/menu.png"
+        /></span>
+      </button>
+    </nav>
+
+    <div class="container">
+      <!----- START OF SIDEBAR NAV ------>
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <a href="index.html"
+            ><img
+              src="media assets/logo.png"
+              alt="PWDCareHubPH"
+              class="header-logo"
+          /></a>
+          <!-- <span class="menu-label">PWD Care Hub PH</span> -->
+          <button class="sidebar-toggle">
+            <span class="material-symbols-rounded"
+              ><img src="media assets/left-arrow.png"
+            /></span>
+          </button>
+        </header>
+
+        <div class="sidebar-content">
+          <!-- SEARCH FORM -->
+          <form action="#" class="search-form">
+            <span class="material-symbols-rounded"
+              ><img src="media assets/search-interface-symbol.png" class="icon"
+            /></span>
+            <input type="search" placeholder="Search..." required />
+          </form>
+
+          <!-- MENU LIST -->
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="#" class="menu-link active">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/home_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Home</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="pwdID.html" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/pwdIdApp_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">PWD ID Application Guide</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/benefits_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Benefits and Discounts</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img
+                    src="media assets/programservices_icon.png"
+                    class="icon"
+                /></span>
+                <span class="menu-label">Government Program and Services</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <span class=""
+                  ><img src="media assets/employment_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Employment and Legal Rights</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/contactus_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Contact us</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!----- START OF SIDEBAR NAV ------>
+
+      <!----- START OF PAGE CONTENTS ------>
+      <div class="main-content">
+        <!-------------------------- HEADER BANNER -------------------------->
+        <!-- <img
+          src="media assets/background.png"
+          alt="PWD Banner"
+          class="home-banner"
+        /> -->
+        <!-------------------------- END HEADER BANNER --------------------------->
+        <h1 class="page-title">Welcome to PWD Care Hub PH</h1>
+        <p class="card">Welcoome cchchchahfhahfa</p>
+      </div>
+      <!----- END OF PAGE CONTENTS ------>
+    </div>
+
+    
 
     <!-------------------------- START OF CONTENTS -------------------------->
-    <div>
+    <!-- <div>
       <section class="content-grid-news">
         
         <article class="card">
@@ -196,14 +298,14 @@
           <button class="highlight-cta">Go to ID Application Guide</button>
         </a>
       </section>
-    </div>
+    </div> -->
     <!-------------------------- END OF CONTENTS -------------------------->
 
     <!------- SCROLL TO TOP BUTTON --------->
     <button id="go-to-top-button" class="btn hidden">Go to Top</button>
 
     <!---------------- FOOTER ----------------->
-    <footer
+    <!-- <footer
       class="d-flex flex-wrap justify-content-between align-items-center py-3 mx-5 my-4 border-top"
     >
       <div class="col-md-4 d-flex align-items-center">
@@ -239,9 +341,10 @@
           </a>
         </li>
       </ul>
-    </footer>
+    </footer> -->
 
     <!---------------- SCRIPTS ----------------->
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -249,5 +352,6 @@
     ></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scrollToTop.js"></script>
+    
   </body>
 </html>
