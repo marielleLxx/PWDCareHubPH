@@ -3,266 +3,234 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Benefits and Discounts</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    
   </head>
   <body>
-    <!-- === ALL CONTENTS THAT FLOATS IN THE BG ==== -->
-    <div class="background">
-      <!-- background moved to CSS (fixed) -->
 
-      <!-- ==== START OF NAVIGATION BAR ==== -->
-      <div>
-        <nav
-          class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top"
-        >
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-              <img
-                src="media assets/logo.png"
-                alt="PWD Care Hub logo"
-                width="40"
-                height="40"
-              />
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <!----- site navbar ----->
+    <nav class="site-nav">
+      <button class="sidebar-toggle">
+        <span class="material-symbols-rounded"
+          ><img src="media assets/menu.png"
+        /></span>
+      </button>
+    </nav>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="home.html"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pwdIdApp.html"
-                    >PWD ID Application Guide</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="benefits.html"
-                    >Benefits and Discounts</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="program.html"
-                    >Government Program and Services</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="employment.html"
-                    >Employment and Legal Rights</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contactus.html">Contact Us</a>
-                </li>
-              </ul>
+    <!----- START OF PAGE BODY (SIDEBAR AND CONTENTS) ------>
+    <div class="container-fluid">
+      <!----- START OF SIDEBAR NAV ------>
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <a href="index.html"
+            ><img
+              src="media assets/logo.png"
+              alt="PWDCareHubPH"
+              class="header-logo"
+          /></a>
+          <!-- <span class="menu-label">PWD Care Hub PH</span> -->
+          <button class="sidebar-toggle">
+            <span class="material-symbols-rounded"
+              ><img src="media assets/left-arrow.png"
+            /></span>
+          </button>
+        </header>
 
-              <form class="d-flex mt-2 mt-lg-0" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <!-- ==== END OF NAVIGATION BAR ==== -->
-
-      <!-- ============ START OF BENEFITS AND DISCOUNTS ====== -->
-      <br>
-        <div class="step-list">
-          <header class="page-header">
-            <span class="page-badge">Benefits and Discounts</span>
-            <h1 class="page-title">PWD Benefits and Discounts</h1>
-            <p class="page-subtitle">
-              Short overview ng common benefits na pwedeng i avail ng PWD, base
-              sa national laws and local policies.
-            </p>
-            <br />
-            <p class="h3">
-              Under Republic Act 10754 (amending Magna Carta for Persons with
-              Disability (RA 7277)), PWDs get the following privileges:
-            </p>
-          </header>
+        <div class="sidebar-content">
+          <!-- MENU LIST -->
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="home.html" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/home_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Home</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="pwdIdApp.html" class="menu-link ">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/pwdIdApp_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">PWD ID Application Guide</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="benefits.html" class="menu-link active">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/benefits_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Benefits and Discounts</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="program.html" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img
+                    src="media assets/programservices_icon.png"
+                    class="icon"
+                /></span>
+                <span class="menu-label">Government Program and Services</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="employment.html" class="menu-link">
+                <span class=""
+                  ><img src="media assets/employment_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Employment and Legal Rights</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="contactus.html" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/contactus_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Contact us</span>
+              </a>
+            </li>
+          </ul>
+          <!-- SEARCH FORM -->
+          <form action="#" class="search-form">
+            <span class="material-symbols-rounded"
+              ><img src="media assets/search-interface-symbol.png" class="icon"
+            /></span>
+            <input type="search" placeholder="Search..." required />
+          </form>
         </div>
+      </aside>
+      <!----- START OF SIDEBAR NAV ------>
 
-        <section class="two-columns">
-          <div class="small-card">
-            <h3>✅ Core Benefits & Discounts for PWDs</h3>
-            <ul>
-              <li>
-                20% discount + VAT exemption on these goods and services:<a
-                  href="https://ncda.gov.ph/disability-laws/republic-acts/republic-act-no-10754-an-act-expanding-the-benefits-and-privileges-of-persons-with-disability-pwd/?utm_source=chatgpt.com"
-                  target="framename"
-                  style="font-size: 14px; color: #1b3a57"
-                >
-                  For more details</a
-                >
-              </li>
-              <ul>
-                <li>Hotels, lodging, inns, motels – accommodation fees</li>
-                <li>
-                  Restaurants, eateries, food & drinks (for personal
-                  consumption)
-                </li>
-                <li>
-                  Medicines, medical supplies and assistive devices (with
-                  prescription/doctor requirement)
-                </li>
-                <li>
-                  Medical and dental services (doctor’s fees, clinic/hospital
-                  services, lab tests, diagnostics)
-                </li>
-                <li>
-                  Public land transport fares — jeepneys, buses, taxis, trains,
-                  ride-hailing, etc.
-                </li>
-                <li>Domestic air and sea travel fares</li>
-                <li>
-                  Admission fees — theaters, cinemas, concerts, cultural /
-                  amusement venues
-                </li>
-                <li>Funeral and burial services (in case of death of a PWD)</li>
-              </ul>
-            </ul>
-          </div>
-          <div class="small-card">
-            <h3>Reminders</h3>
-            <ul>
-              <li>Laging magdala ng PWD ID at supporting valid ID</li>
-              <li>Discounts ay personal sa PWD at hindi transferable</li>
-              <li>Ask sa establishment kung ano ang exact coverage nila</li>
-            </ul>
-          </div>
-        </section>
-        <section class="two-columns">
-          <div class="small-card">
-            <h3>✅ Core Benefits & Discounts for PWDs</h3>
-            <ul>
-              <li>
-                20% discount + VAT exemption on these goods and services:<a
-                  href="https://ncda.gov.ph/disability-laws/republic-acts/republic-act-no-10754-an-act-expanding-the-benefits-and-privileges-of-persons-with-disability-pwd/?utm_source=chatgpt.com"
-                  target="framename"
-                  style="font-size: 14px; color: #1b3a57"
-                >
-                  For more details</a
-                >
-              </li>
-              <ul>
-                <li>Hotels, lodging, inns, motels – accommodation fees</li>
-                <li>
-                  Restaurants, eateries, food & drinks (for personal
-                  consumption)
-                </li>
-                <li>
-                  Medicines, medical supplies and assistive devices (with
-                  prescription/doctor requirement)
-                </li>
-                <li>
-                  Medical and dental services (doctor’s fees, clinic/hospital
-                  services, lab tests, diagnostics)
-                </li>
-                <li>
-                  Public land transport fares — jeepneys, buses, taxis, trains,
-                  ride-hailing, etc.
-                </li>
-                <li>Domestic air and sea travel fares</li>
-                <li>
-                  Admission fees — theaters, cinemas, concerts, cultural /
-                  amusement venues
-                </li>
-                <li>Funeral and burial services (in case of death of a PWD)</li>
-              </ul>
-            </ul>
-          </div>
-          <div class="small-card">
-            <h3>Reminders</h3>
-            <ul>
-              <li>Laging magdala ng PWD ID at supporting valid ID</li>
-              <li>Discounts ay personal sa PWD at hindi transferable</li>
-              <li>Ask sa establishment kung ano ang exact coverage nila</li>
-            </ul>
-          </div>
-        </section>
-    </br>
-        <!-- ============ END OF BENEFITS AND DISCOUNTS  ====== -->
+      <!----- START OF PAGE CONTENTS ------>
+      <div class="main-content">
+        <div class="background">
 
-        <!------- SCROLL TO TOP BUTTON --------->
-        <button id="go-to-top-button" class="btn hidden">Go to Top</button>
+          <!-- ============ START OF BENEFITS AND DISCOUNTS ====== -->
+           <div class="step-list">
+            <header class="page-header">
+              <span class="page-badge">Benefits and Discounts</span>
+              <h1 class="page-title">PWD Benefits and Discounts</h1>
+              <p class="page-subtitle">
+                Short overview ng common benefits na pwedeng i avail ng PWD, base
+                sa national laws and local policies.
+              </p>
+            </br>
+              <p class="h3">
+                Under Republic Act 10754 (amending Magna Carta for Persons with
+                Disability (RA 7277)), PWDs get the following privileges:
+              </p>
+            </header>
+          </div>
+          
+          <section class="two-columns">
+            <div class="small-card">
+              <h3>✅ Core Benefits & Discounts for PWDs</h3>
+              <ul>
+                <li>
+                  20% discount + VAT exemption on these goods and services:<a
+                    href="https://ncda.gov.ph/disability-laws/republic-acts/republic-act-no-10754-an-act-expanding-the-benefits-and-privileges-of-persons-with-disability-pwd/?utm_source=chatgpt.com"
+                    target="framename"
+                    style="font-size: 14px; color: #1b3a57"
+                  >
+                    For more details</a
+                  >
+                </li>
+                <ul>
+                  <li>Hotels, lodging, inns, motels – accommodation fees</li>
+                  <li>
+                    Restaurants, eateries, food & drinks (for personal
+                    consumption)
+                  </li>
+                  <li>
+                    Medicines, medical supplies and assistive devices (with
+                    prescription/doctor requirement)
+                  </li>
+                  <li>
+                    Medical and dental services (doctor’s fees, clinic/hospital
+                    services, lab tests, diagnostics)
+                  </li>
+                  <li>
+                    Public land transport fares — jeepneys, buses, taxis, trains,
+                    ride-hailing, etc.
+                  </li>
+                  <li>Domestic air and sea travel fares</li>
+                  <li>
+                    Admission fees — theaters, cinemas, concerts, cultural /
+                    amusement venues
+                  </li>
+                  <li>Funeral and burial services (in case of death of a PWD)</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="small-card">
+              <h3>Reminders</h3>
+              <ul>
+                <li>Laging magdala ng PWD ID at supporting valid ID</li>
+                <li>Discounts ay personal sa PWD at hindi transferable</li>
+                <li>Ask sa establishment kung ano ang exact coverage nila</li>
+              </ul>
+            </div>
+          </section>
+          <section class="two-columns">
+            <div class="small-card">
+              <h3>✅ Core Benefits & Discounts for PWDs</h3>
+              <ul>
+                <li>
+                  20% discount + VAT exemption on these goods and services:<a
+                    href="https://ncda.gov.ph/disability-laws/republic-acts/republic-act-no-10754-an-act-expanding-the-benefits-and-privileges-of-persons-with-disability-pwd/?utm_source=chatgpt.com"
+                    target="framename"
+                    style="font-size: 14px; color: #1b3a57"
+                  >
+                    For more details</a
+                  >
+                </li>
+                <ul>
+                  <li>Hotels, lodging, inns, motels – accommodation fees</li>
+                  <li>
+                    Restaurants, eateries, food & drinks (for personal
+                    consumption)
+                  </li>
+                  <li>
+                    Medicines, medical supplies and assistive devices (with
+                    prescription/doctor requirement)
+                  </li>
+                  <li>
+                    Medical and dental services (doctor’s fees, clinic/hospital
+                    services, lab tests, diagnostics)
+                  </li>
+                  <li>
+                    Public land transport fares — jeepneys, buses, taxis, trains,
+                    ride-hailing, etc.
+                  </li>
+                  <li>Domestic air and sea travel fares</li>
+                  <li>
+                    Admission fees — theaters, cinemas, concerts, cultural /
+                    amusement venues
+                  </li>
+                  <li>Funeral and burial services (in case of death of a PWD)</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="small-card">
+              <h3>Reminders</h3>
+              <ul>
+                <li>Laging magdala ng PWD ID at supporting valid ID</li>
+                <li>Discounts ay personal sa PWD at hindi transferable</li>
+                <li>Ask sa establishment kung ano ang exact coverage nila</li>
+              </ul>
+            </div>
+          </section>
+          <!-- ============ END OF BENEFITS AND DISCOUNTS  ====== -->
+        </div>
       </div>
+      <!----- END OF PAGE CONTENTS ----->
       
     </div>
+    <!----- END OF PAGE BODY ------>
+    
 
-    <!---------------- FOOTER ----------------->
-    <footer
-      class="d-flex flex-wrap justify-content-between align-items-center py-3 mx-5 my-4 border-top"
-    >
-      <div class="col-md-4 d-flex align-items-center">
-        <a
-          href="/"
-          class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
-          aria-label="Bootstrap"
-        >
-          <img
-            src="media assets/logo.png"
-            alt="PWD Care Hub PH logo"
-            width="50"
-            height="50"
-          />
-        </a>
-        <span class="mb-3 mb-md-0 text-body-secondary">
-          &copy; 2025 PWD Care Hub PH
-        </span>
-      </div>
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3">
-          <a class="text-body-secondary" href="#" aria-label="Instagram">
-            <svg class="bi" width="30" height="30" aria-hidden="true">
-              <use xlink:href="#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a class="text-body-secondary" href="#" aria-label="Facebook">
-            <svg class="bi" width="24" height="24">
-              <use xlink:href="#facebook"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </footer>
+   
 
     <!---------------- SCRIPTS ----------------->
     <script
@@ -272,5 +240,7 @@
     ></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scrollToTop.js"></script>
+    <script src="script.js"></script>
+
   </body>
 </html>

@@ -5,328 +5,314 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>PWD ID Application Guide</title>
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
-    />
+    /> -->
     <link rel="stylesheet" href="style.css" />
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
-    />
+    /> -->
   </head>
   <body>
-    <!-- === ALL CONTENTS THAT FLOATS IN THE BG ==== -->
-    <div class="background">
-      <!-- background moved to CSS (fixed) -->
+    <!----- site navbar ----->
+    <nav class="site-nav">
+      <button class="sidebar-toggle">
+        <span class="material-symbols-rounded"
+          ><img src="media assets/menu.png"
+        /></span>
+      </button>
+    </nav>
 
-      <!-- ==== START OF NAVIGATION BAR ==== -->
-      <div>
-        <nav
-          class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top"
-        >
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-              <img
-                src="media assets/logo.png"
-                alt="PWD Care Hub logo"
-                width="40"
-                height="40"
-              />
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="home.html"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pwdIdApp.html"
-                    >PWD ID Application Guide</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="benefits.html"
-                    >Benefits and Discounts</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="program.html"
-                    >Government Program and Services</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="employment.html"
-                    >Employment and Legal Rights</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contactus.html">Contact Us</a>
-                </li>
-              </ul>
-
-              <form class="d-flex mt-2 mt-lg-0" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <!-- ==== END OF NAVIGATION BAR ==== -->
-
-      <!-- ============ START OF STEP BY STEP PROCESS ====== -->
-      <br>
-        <header class="page-header">
-          <div class="step-list">
-            <span class="page-badge"><b>STEP BY STEP Guide</b></span>
-            <h1 class="page-title">PWD ID Application Guide</h1>
-            <p class="page-description">
-              Para sa mga <strong>Mandaluyong City residents</strong> na gustong
-              mag-apply o mag-update ng Persons with Disabilities ID.
-              Naka-outline dito ang purpose ng PWD ID, requirements,
-              step-by-step process, at important reminders.
-            </p>
-          </div>
+    <div class="container-fluid">
+      <!----- START OF SIDEBAR NAV ------>
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <a href="index.html"
+            ><img
+              src="media assets/logo.png"
+              alt="PWDCareHubPH"
+              class="header-logo"
+          /></a>
+          <!-- <span class="menu-label">PWD Care Hub PH</span> -->
+          <button class="sidebar-toggle">
+            <span class="material-symbols-rounded"
+              ><img src="media assets/left-arrow.png"
+            /></span>
+          </button>
         </header>
 
-        <section class="step-list">
-          <h2>What is the PWD ID?</h2>
-          <hr />
-          <p>
-            The PWD Identification Card is an
-            <strong>official government-issued ID card</strong>
-            that helps persons with disabilities access benefits, discounts, and
-            government support. It is for Mandaluyong residents who have visible
-            or non-apparent disabilities.
-          </p>
-        </section>
-
-        <section class="step-list">
-          <h2>Who Can Apply?</h2>
-          <hr />
-          <p>Any <strong>Mandaluyong resident</strong> with a disability.</p>
-          <ul>
-            <li>Physical disability</li>
-            <li>Visual impairment</li>
-            <li>Hearing impairment</li>
-            <li>Intellectual disability</li>
-            <li>Mental or psychosocial disability</li>
-            <li>Learning disability</li>
-            <li>Non-apparent or hidden disability</li>
-          </ul>
-        </section>
-        <section class="step-list">
-          <h2>Where to Apply</h2>
-          <hr />
-          <p>
-            <strong>Persons with Disabilities Affairs Division (PDAD)</strong
-            ><br />
-            Mandaluyong City Government Complex, Maysilo Circle<br />
-            Located at the back of the Executive Building
-          </p>
-          <p>
-            <strong>Contact Details</strong><br />
-            Phone: (02) 8532-5001 loc 596<br />
-            Email: dpad@mandaluyong.gov.ph
-          </p>
-        </section>
-
-        <section class="step-list">
-          <h2>Requirements</h2>
-          <hr />
-          <p>Prepare the following items before going to the PDAD office.</p>
-          <ul>
-            <li>
-              Medical certificate or clinical abstract na nagsasaad ng
-              disability
+        <div class="sidebar-content">
+          <!-- MENU LIST -->
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="home.html" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/home_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Home</span>
+              </a>
             </li>
-            <li>Three (3) pieces of 2×2 ID pictures</li>
-            <li>Two (2) pieces of 1×1 ID pictures</li>
-            <li>Blood type result</li>
-            <li>Voter’s ID or Voter’s Registration</li>
+            <li class="menu-item">
+              <a href="pwdIdApp.html" class="menu-link active">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/pwdIdApp_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">PWD ID Application Guide</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="benefits.html" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/benefits_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Benefits and Discounts</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="program.html" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img
+                    src="media assets/programservices_icon.png"
+                    class="icon"
+                /></span>
+                <span class="menu-label">Government Program and Services</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="employment.html" class="menu-link">
+                <span class=""
+                  ><img src="media assets/employment_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Employment and Legal Rights</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="contactus.html" class="menu-link">
+                <span class="material-symbols-rounded"
+                  ><img src="media assets/contactus_icon.png" class="icon"
+                /></span>
+                <span class="menu-label">Contact us</span>
+              </a>
+            </li>
           </ul>
-          <hr />
-          <article class="card">
-            <strong>Note:</strong><br />
-            <ul>
-              <li>
-                If the applicant is a <b>minor</b>. Parent’s or guardian’s voter
-                documents are accepted
-              </li>
-              <li>
-                If you do not have ID pictures or blood typing. The
-                <b>City Government</b> can assist you for free
-              </li>
-            </ul>
-          </article>
-        </section>
+          <!-- SEARCH FORM -->
+          <form action="#" class="search-form">
+            <span class="material-symbols-rounded"
+              ><img src="media assets/search-interface-symbol.png" class="icon"
+            /></span>
+            <input type="search" placeholder="Search..." required />
+          </form>
+        </div>
+      </aside>
+      <!----- START OF SIDEBAR NAV ------>
 
-        <section class="step-list">
-          <h2>How to Apply (Step by Step)</h2>
-          <hr />
-          <br />
-          <div class="step">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h3>Submit your requirements</h3>
-              <p>Staff will evaluate and guide you if something is missing.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h3>Fill out the PWD Application Form</h3>
+      <!----- START OF PAGE CONTENTS ------>
+      <div class="main-content">
+        <div class="background">
+          <!-- ============ START OF STEP BY STEP PROCESS ====== -->
+          <div>
+            <header class="page-header">
+              <div class="step-list">
+                <h1 class="page-title">PWD ID Application Guide</h1>
+                <p class="page-description">
+                  Para sa mga <strong>Mandaluyong City residents</strong> na
+                  gustong mag-apply o mag-update ng Persons with Disabilities
+                  ID. Naka-outline dito ang purpose ng PWD ID, requirements,
+                  step-by-step process, at important reminders.
+                </p>
+              </div>
+            </header>
+
+            <section class="step-list">
+              <h2>What is the PWD ID?</h2>
+              <hr />
               <p>
-                A staff member will help if you need assistance with writing.
+                The PWD Identification Card is an
+                <strong>official government-issued ID card</strong>
+                that helps persons with disabilities access benefits, discounts,
+                and government support. It is for Mandaluyong residents who have
+                visible or non-apparent disabilities.
               </p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h3>Processing</h3>
+            </section>
+
+            <section class="step-list">
+              <h2>Who Can Apply?</h2>
+              <hr />
               <p>
-                The office will enter your details. prepare your ID. and create
-                your booklets.
+                Any <strong>Mandaluyong resident</strong> with a disability.
               </p>
-              <p>
-                If you have no blood type result or need help with voter
-                registration.
-                <br /><strong>PDAD will assist you</strong>.
-              </p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-number">4</div>
-            <div class="step-content">
-              <h3>Claim your PWD ID and booklets</h3>
-              <p>You will receive your:</p>
               <ul>
-                <li>PWD ID</li>
-                <li>Medicines booklet</li>
-                <li>Prime-commodities booklet</li>
+                <li>Physical disability</li>
+                <li>Visual impairment</li>
+                <li>Hearing impairment</li>
+                <li>Intellectual disability</li>
+                <li>Mental or psychosocial disability</li>
+                <li>Learning disability</li>
+                <li>Non-apparent or hidden disability</li>
               </ul>
-              <p>Staff will guide you on how to use them.</p>
-            </div>
+            </section>
+
+            <section class="step-list">
+              <h2>Where to Apply</h2>
+              <hr />
+              <p>
+                <strong
+                  >Persons with Disabilities Affairs Division (PDAD)</strong
+                ><br />
+                Mandaluyong City Government Complex, Maysilo Circle<br />
+                Located at the back of the Executive Building
+              </p>
+              <p>
+                <strong>Contact Details</strong><br />
+                Phone: (02) 8532-5001 loc 596<br />
+                Email: dpad@mandaluyong.gov.ph
+              </p>
+            </section>
+
+            <section class="step-list">
+              <h2>Requirements</h2>
+              <hr />
+              <p>
+                Prepare the following items before going to the PDAD office.
+              </p>
+              <ul>
+                <li>
+                  Medical certificate or clinical abstract na nagsasaad ng
+                  disability
+                </li>
+                <li>Three (3) pieces of 2×2 ID pictures</li>
+                <li>Two (2) pieces of 1×1 ID pictures</li>
+                <li>Blood type result</li>
+                <li>Voter’s ID or Voter’s Registration</li>
+              </ul>
+              <hr />
+              <article class="card">
+                <strong>Note:</strong><br />
+                <ul>
+                  <li>
+                    If the applicant is a <b>minor</b>. Parent’s or guardian’s
+                    voter documents are accepted
+                  </li>
+                  <li>
+                    If you do not have ID pictures or blood typing. The
+                    <b>City Government</b> can assist you for free
+                  </li>
+                </ul>
+              </article>
+            </section>
+
+            <section class="step-list">
+              <h2>How to Apply (Step by Step)</h2>
+              <hr />
+              <br />
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h3>Submit your requirements</h3>
+                  <p>
+                    Staff will evaluate and guide you if something is missing.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h3>Fill out the PWD Application Form</h3>
+                  <p>
+                    A staff member will help if you need assistance with
+                    writing.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h3>Processing</h3>
+                  <p>
+                    The office will enter your details. prepare your ID. and
+                    create your booklets.
+                  </p>
+                  <p>
+                    If you have no blood type result or need help with voter
+                    registration.
+                    <br /><strong>PDAD will assist you</strong>.
+                  </p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h3>Claim your PWD ID and booklets</h3>
+                  <p>You will receive your:</p>
+                  <ul>
+                    <li>PWD ID</li>
+                    <li>Medicines booklet</li>
+                    <li>Prime-commodities booklet</li>
+                  </ul>
+                  <p>Staff will guide you on how to use them.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="step-list">
+              <h2>Fees and Processing Time<br /></h2>
+              <hr />
+              <ul>
+                <li>The service is free</li>
+                <li>
+                  Processing time usually takes around <b>30 minutes</b> if your
+                  requirements are complete
+                </li>
+              </ul>
+            </section>
+            <section class="step-list">
+              <h2>After You Receive Your PWD ID</h2>
+              <hr />
+              <ul>
+                <li>Keep your ID and booklets with you</li>
+                <li>Present them when using your benefits and discounts</li>
+                <li>
+                  Use your card for transportation, medicines, and essential
+                  goods
+                </li>
+              </ul>
+            </section>
+            <section class="step-list">
+              <h2>Need Help or Have Questions?</h2>
+              <hr />
+              <p>
+                You may call or email the PDAD office. or visit the City
+                Government Complex for direct assistance.
+              </p>
+            </section>
+            <section class="step-list">
+              <h2>Important Reminders</h2>
+              <hr />
+              <ul>
+                <li>
+                  The Mandaluyong City government has released a new version of
+                  the PWD ID with a <b>QR code</b>. Existing PWDs are encouraged
+                  to replace their old IDs.
+                </li>
+                <li>
+                  The city also has an online PWD ID verification system on the
+                  Mandaluyong City website.
+                </li>
+              </ul>
+            </section>
           </div>
-        </section>
-        <section class="step-list">
-          <h2>Fees and Processing Time<br /></h2>
-          <hr />
-          <ul>
-            <li>The service is free</li>
-            <li>
-              Processing time usually takes around <b>30 minutes</b> if your
-              requirements are complete
-            </li>
-          </ul>
-        </section>
-        <section class="step-list">
-          <h2>After You Receive Your PWD ID</h2>
-          <hr />
-          <ul>
-            <li>Keep your ID and booklets with you</li>
-            <li>Present them when using your benefits and discounts</li>
-            <li>
-              Use your card for transportation, medicines, and essential goods
-            </li>
-          </ul>
-        </section>
-        <section class="step-list">
-          <h2>Need Help or Have Questions?</h2>
-          <hr />
-          <p>
-            You may call or email the PDAD office. or visit the City Government
-            Complex for direct assistance.
-          </p>
-        </section>
-        <section class="step-list">
-          <h2>Important Reminders</h2>
-          <hr />
-          <ul>
-            <li>
-              The Mandaluyong City government has released a new version of the
-              PWD ID with a <b>QR code</b>. Existing PWDs are encouraged to
-              replace their old IDs.
-            </li>
-            <li>
-              The city also has an online PWD ID verification system on the
-              Mandaluyong City website.
-            </li>
-          </ul>
-        </section>
-    </br>
+          <!-- ============ END OF STEP BY STEP PROCESS ====== -->
+        </div>
       </div>
-      <!-- ============ END OF STEP BY STEP PROCESS ====== -->
+      <!----- END OF PAGE CONTENTS ----->
 
       <!------- SCROLL TO TOP BUTTON --------->
       <button id="go-to-top-button" class="btn hidden">Go to Top</button>
     </div>
-
-    <!---------------- FOOTER ----------------->
-    <footer
-      class="d-flex flex-wrap justify-content-between align-items-center py-3 mx-5 my-4 border-top"
-    >
-      <div class="col-md-4 d-flex align-items-center">
-        <a
-          href="/"
-          class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
-          aria-label="Bootstrap"
-        >
-          <img
-            src="media assets/logo.png"
-            alt="PWD Care Hub PH logo"
-            width="50"
-            height="50"
-          />
-        </a>
-        <span class="mb-3 mb-md-0 text-body-secondary">
-          &copy; 2025 PWD Care Hub PH
-        </span>
-      </div>
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3">
-          <a class="text-body-secondary" href="#" aria-label="Instagram">
-            <svg class="bi" width="30" height="30" aria-hidden="true">
-              <use xlink:href="#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a class="text-body-secondary" href="#" aria-label="Facebook">
-            <svg class="bi" width="24" height="24">
-              <use xlink:href="#facebook"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </footer>
 
     <!---------------- SCRIPTS ----------------->
     <script
@@ -336,5 +322,6 @@
     ></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scrollToTop.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
