@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Benefits and Discounts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     
   </head>
@@ -19,7 +20,7 @@
     </nav>
 
     <!----- START OF PAGE BODY (SIDEBAR AND CONTENTS) ------>
-    <div class="container-fluid">
+    <div class="layout-wrapper">
       <!----- START OF SIDEBAR NAV ------>
       <aside class="sidebar">
         <header class="sidebar-header">
@@ -92,12 +93,52 @@
             </li>
           </ul>
           <!-- SEARCH FORM -->
-          <form action="#" class="search-form">
-            <span class="material-symbols-rounded"
-              ><img src="media assets/search-interface-symbol.png" class="icon"
-            /></span>
-            <input type="search" placeholder="Search..." required />
+           <form
+            class="search-form"
+            role="search"
+            onsubmit="performSearch(event)"
+            style="position: relative; width: 100%; max-width: 600px"
+          >
+            <div style="position: relative; flex: 1">
+              <input
+                class="form-control"
+                type="search"
+                id="searchInput"
+                placeholder="Search PWD services"
+                aria-label="Search PWD website"
+                onkeydown="handleKey(event)"
+                style="padding-right: 50px; width: 100%"
+              />
+              <button
+                class="btn"
+                type="button"
+                onclick="startVoiceSearch()"
+                aria-label="Voice search"
+                style="
+                  position: absolute;
+                  right: 8px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background: none;
+                  border: none;
+                  font-size: 18px;
+                  cursor: pointer;
+                  padding: 5px;
+                  z-index: 10;
+                "
+              >
+                🎤
+              </button>
+            </div>
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              aria-label="Submit search"
+            >
+              Search
+            </button>
           </form>
+          <div id="results" role="region" aria-live="polite"></div>
         </div>
       </aside>
       <!----- START OF SIDEBAR NAV ------>
@@ -107,120 +148,143 @@
         <div class="background">
 
           <!-- ============ START OF BENEFITS AND DISCOUNTS ====== -->
-           <div class="step-list">
+          <div class="step-list">
             <header class="page-header">
-              <span class="page-badge">Benefits and Discounts</span>
-              <h1 class="page-title">PWD Benefits and Discounts</h1>
-              <p class="page-subtitle">
-                Short overview ng common benefits na pwedeng i avail ng PWD, base
-                sa national laws and local policies.
-              </p>
-            </br>
-              <p class="h3">
-                Under Republic Act 10754 (amending Magna Carta for Persons with
-                Disability (RA 7277)), PWDs get the following privileges:
+              <span class="page-badge">FOR MANDALUYONG CITY RESIDENTS</span>
+              <h1 class="page-title"><b>PWD Benefits and Discounts</b></h1>
+              <p>
+                <span>
+                  Persons with Disabilities (PWDs living in Mandaluyong City are entitled to a wide range of benefits, discounts, and privileges provided under Philippine national laws and supported by local government programs of the City of Mandaluyong. These benefits are designed to ensure equal access to essential services, promote dignity, and improve the quality of life of PWD residents.
+                </span><hr style="visibility: hidden;">
+                <span> 
+                  All benefits may be availed by presenting a <b>valid Mandaluyong PWD Identification Card</b>, issued by the Persons with Disability Affairs Office (PDAO).
+                </span>
               </p>
             </header>
           </div>
+        
+          <div class="card benefit2-card">
+            <div class="card-header">
+              Legal Basis: Republic Act 10754 amending Republic Act 7277 (Magna Carta for Persons with Disability)
+            </div>
           
-          <section class="two-columns">
-            <div class="small-card">
-              <h3>✅ Core Benefits & Discounts for PWDs</h3>
+            <div class="card-body">
+              <p>
+                Ang mga benefits at discounts na ito ay base sa Republic Act No. 7277, as amended by RA 9442 and RA 10754, at iba pang kaugnay na batas.
+                Maaaring mag-iba ang implementasyon ng mga benepisyo depende sa lokal na pamahalaan o institusyon.
+                Siguraduhing magdala at ipakita ang iyong valid PWD ID upang ma-avail ang mga benepisyo.
+              </p>
+            </div>
+          </div>
+
+
+        <!-----------core benefits---------------->
+        
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="card benefit-card">
+            <div class="card-header">
+              <h2><b>Core Benefits & Discounts</b></h2>
+            </div>
+
+            <div class="card-body">
+              <h3><img src="media assets/transpo.png" alt="Transportation Icon" class="icon-img me-2">
+                <b>Transportation</b></h3>
               <ul>
-                <li>
-                  20% discount + VAT exemption on these goods and services:<a
-                    href="https://ncda.gov.ph/disability-laws/republic-acts/republic-act-no-10754-an-act-expanding-the-benefits-and-privileges-of-persons-with-disability-pwd/?utm_source=chatgpt.com"
-                    target="framename"
-                    style="font-size: 14px; color: #1b3a57"
-                  >
-                    For more details</a
-                  >
-                </li>
-                <ul>
-                  <li>Hotels, lodging, inns, motels – accommodation fees</li>
-                  <li>
-                    Restaurants, eateries, food & drinks (for personal
-                    consumption)
-                  </li>
-                  <li>
-                    Medicines, medical supplies and assistive devices (with
-                    prescription/doctor requirement)
-                  </li>
-                  <li>
-                    Medical and dental services (doctor’s fees, clinic/hospital
-                    services, lab tests, diagnostics)
-                  </li>
-                  <li>
-                    Public land transport fares — jeepneys, buses, taxis, trains,
-                    ride-hailing, etc.
-                  </li>
-                  <li>Domestic air and sea travel fares</li>
-                  <li>
-                    Admission fees — theaters, cinemas, concerts, cultural /
-                    amusement venues
-                  </li>
-                  <li>Funeral and burial services (in case of death of a PWD)</li>
-                </ul>
+                <li>20% Discounts and VAT exemption sa mga pampublikong transportation tulad ng jeep, bus, taxi, at TNVS tulad ng Grab/Angkas tuwing gumagamit ng PWD ID.  </li>
+                <li>50% Discount sa MRT/LRT fares para sa mga PWD’s (and senior citizen)</li>
+              </ul>
+              
+              <h3><img src="media assets/food.png" alt="Transportation Icon" class="icon-img me-2">
+                <b>Food and Restaurants</b></h3>
+
+              <ul>
+                <li>20% discount and VAT exemption sa pagkain at inumin para sa personal consumption lamang ng PWD.</li>
+              </ul>
+
+
+              <h3><img src="media assets/health.png" alt="Transportation Icon" class="icon-img me-2">
+                <b>Medical and Health Services</b></h3>
+
+              <ul>
+                <li>20% discount and VAT exemption sa medicines, medical supplies, diagnostics, doctor’s fees, at hospital services (maaaring kailangan ang reseta ng doctor kung required).</li>
+              </ul>
+
+              <h3><img src="media assets/travel.png" alt="Transportation Icon" class="icon-img me-2">
+                <b>Travel and Accomodation</b></h3>
+
+              <ul>
+                <li>20% and VAT exemption sa domestic air at sea travel fares pati na rin sa hotels, inns, and lodging services.</li>
+              </ul> 
+
+               <h3> <img src="media assets/others.png" alt="Transportation Icon" class="icon-img me-2">
+                <b>Other Services</b></h3>
+
+              <ul>
+                <li>20% Discount sa essential funeral services para sa PWD, kabilang ang casket/urn, embalming, morgue fees, at transport papuntang burial site.</li>
+              </ul> 
+
+              <ul>
+                <li>5% discount para sa PWDs sa basic necessities at prime commodities tulad ng bigas, karne, prutas, bottled water, laundry soap, at iba pang pangunahing bilihin.</li>
+              </ul> 
+ 
+            </div>
+          </div>
+        </div>
+
+
+        <!-----------end of core benefits----------->
+
+        <!-----------other benefits---------------->
+        <div class="container d-flex justify-content-center align-items-center">
+          <div class="card benefit3-card">
+
+            <div class="card-header">
+              <h2><b>Other Benefits and Privileges</b></h2>
+            </div>
+
+            <div class="card-body">
+              <h3> <b>Priority Access</b></h3>
+
+              <ul>
+                <li>EXPRESS / PRIORITY LANES in many establishments (government offices, commercial shops, hospitals, etc.) for easier access and convenience.</li>
               </ul>
             </div>
-            <div class="small-card">
-              <h3>Reminders</h3>
+
+            <div class="card-body">
+              <h3> <b>Educational Assistance</b></h3>
+
               <ul>
-                <li>Laging magdala ng PWD ID at supporting valid ID</li>
-                <li>Discounts ay personal sa PWD at hindi transferable</li>
-                <li>Ask sa establishment kung ano ang exact coverage nila</li>
-              </ul>
+                <li>PWDs may avail of Scholarships, grants, financial aid, Subsidies and support for books, school supplies, uniforms for primary, secondary, tertiary, vocational, and technical education.</li>
+                <li>Access to Special Education (SPED) schools and programs that provide specialized instruction and support services for learners with disabilities.</li>
+              </ul>    
             </div>
-          </section>
-          <section class="two-columns">
-            <div class="small-card">
-              <h3>✅ Core Benefits & Discounts for PWDs</h3>
+
+            <div class="card-body">
+              <h3> <b>Employment and Social Security</b></h3>
+
               <ul>
-                <li>
-                  20% discount + VAT exemption on these goods and services:<a
-                    href="https://ncda.gov.ph/disability-laws/republic-acts/republic-act-no-10754-an-act-expanding-the-benefits-and-privileges-of-persons-with-disability-pwd/?utm_source=chatgpt.com"
-                    target="framename"
-                    style="font-size: 14px; color: #1b3a57"
-                  >
-                    For more details</a
-                  >
-                </li>
-                <ul>
-                  <li>Hotels, lodging, inns, motels – accommodation fees</li>
-                  <li>
-                    Restaurants, eateries, food & drinks (for personal
-                    consumption)
-                  </li>
-                  <li>
-                    Medicines, medical supplies and assistive devices (with
-                    prescription/doctor requirement)
-                  </li>
-                  <li>
-                    Medical and dental services (doctor’s fees, clinic/hospital
-                    services, lab tests, diagnostics)
-                  </li>
-                  <li>
-                    Public land transport fares — jeepneys, buses, taxis, trains,
-                    ride-hailing, etc.
-                  </li>
-                  <li>Domestic air and sea travel fares</li>
-                  <li>
-                    Admission fees — theaters, cinemas, concerts, cultural /
-                    amusement venues
-                  </li>
-                  <li>Funeral and burial services (in case of death of a PWD)</li>
-                </ul>
-              </ul>
-            </div>
-            <div class="small-card">
-              <h3>Reminders</h3>
-              <ul>
-                <li>Laging magdala ng PWD ID at supporting valid ID</li>
-                <li>Discounts ay personal sa PWD at hindi transferable</li>
-                <li>Ask sa establishment kung ano ang exact coverage nila</li>
-              </ul>
-            </div>
-          </section>
+                <li>PWD’s working in the Philippines are covered by SSS/GSIS, Philhealth, and Pag-IBIG benefits like any other worker.</li>
+              </ul>                  
+            </div>       
+            
+          </div>
+        </div>
+
+        <!--------end of other benefits---------------->
+
+
+        <div class="card reminder-card">
+          <div class="card-header">
+           <img src="media assets/reminder.png" alt="Transportation Icon" class="icon-img me-2"><h2><b>Reminder</b></h2>
+          </div>
+          <div class="card-body">
+            <ul>
+            <li>Laging magdala ng PWD ID at supporting valid ID</li>
+            <li>Ang discounts para lamang sa may-ari ng PWD ID at hindi maaaring ipasa o ilipat sa iba.</li>
+            <li>Itanong sa establishment upang malinaw na malaman kung ano ang exact coverage ng benepisyong kanilang ipinagkakaloob.</li>
+            </ul>
+          </div>
+        </div> 
           <!-- ============ END OF BENEFITS AND DISCOUNTS  ====== -->
         </div>
       </div>
@@ -241,6 +305,7 @@
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scrollToTop.js"></script>
     <script src="script.js"></script>
+    <script src="search.js"></script>
 
   </body>
 </html>

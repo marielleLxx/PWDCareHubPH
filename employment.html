@@ -1,14 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMPLOYMENT AND LEGAL RIGHTS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
-    
   </head>
   <body>
-
     <!----- site navbar ----->
     <nav class="site-nav">
       <button class="sidebar-toggle">
@@ -19,7 +23,7 @@
     </nav>
 
     <!----- START OF PAGE BODY (SIDEBAR AND CONTENTS) ------>
-    <div class="container-fluid">
+    <div class="layout-wrapper">
       <!----- START OF SIDEBAR NAV ------>
       <aside class="sidebar">
         <header class="sidebar-header">
@@ -92,12 +96,52 @@
             </li>
           </ul>
           <!-- SEARCH FORM -->
-          <form action="#" class="search-form">
-            <span class="material-symbols-rounded"
-              ><img src="media assets/search-interface-symbol.png" class="icon"
-            /></span>
-            <input type="search" placeholder="Search..." required />
+          <form
+            class="search-form"
+            role="search"
+            onsubmit="performSearch(event)"
+            style="position: relative; width: 100%; max-width: 600px"
+          >
+            <div style="position: relative; flex: 1">
+              <input
+                class="form-control"
+                type="search"
+                id="searchInput"
+                placeholder="Search PWD services"
+                aria-label="Search PWD website"
+                onkeydown="handleKey(event)"
+                style="padding-right: 50px; width: 100%"
+              />
+              <button
+                class="btn"
+                type="button"
+                onclick="startVoiceSearch()"
+                aria-label="Voice search"
+                style="
+                  position: absolute;
+                  right: 8px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background: none;
+                  border: none;
+                  font-size: 18px;
+                  cursor: pointer;
+                  padding: 5px;
+                  z-index: 10;
+                "
+              >
+                🎤
+              </button>
+            </div>
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              aria-label="Submit search"
+            >
+              Search
+            </button>
           </form>
+          <div id="results" role="region" aria-live="polite"></div>
         </div>
       </aside>
       <!----- START OF SIDEBAR NAV ------>
@@ -105,28 +149,209 @@
       <!----- START OF PAGE CONTENTS ------>
       <div class="main-content">
         <div class="background">
-
           <!-- ============ START OF PROGRAM AND SERVICES ====== -->
-           <div class="step-list">
-            <header class="page-header">
-              <h1 class="page-title">EMPLOYMENT AND LEGAL RIGHTS</h1>
-            </header>
-          </div>
+          <main class="container my-5 pt-5 step-list">
+            <section id="employment-legal-rights">
+              <span class="page-badge">FOR MANDALUYONG CITY RESIDENTS</span>
+              <h1 class="mb-4">Employment & Legal Rights (PWDs)</h1>
+
+              <!-- Overview Section -->
+              <section class="mb-5">
+                <h2>Overview</h2>
+                <p>
+                  Ang Persons with Disabilities (PWDs) sa Pilipinas ay
+                  <strong>protektado ng batas</strong>
+                  para masigurong may pantay na oportunidad sa trabaho, maayos
+                  na trato, at walang diskriminasyon sa workplace.
+                </p>
+              </section>
+
+              <!-- Key Employment Rights of PWDs -->
+              <section class="mb-5">
+                <h2>Key Employment Rights of PWDs</h2>
+
+                <h3>Equal Job Opportunity</h3>
+                <p>
+                  May karapatan ang PWD na mag-apply, ma-consider, at ma-hire sa
+                  trabahong kwalipikado sila. Hindi puwedeng tanggihan ng
+                  employer ang aplikante dahil lang sa kapansanan.
+                </p>
+                <p><strong>Law:</strong> RA 7277, RA 10524</p>
+
+                <h3>No Discrimination at Work</h3>
+                <ul>
+                  <li>Hindi pag-hire</li>
+                  <li>Pagbaba ng sahod</li>
+                  <li>Pagharang sa promotion</li>
+                  <li>Pagtanggal sa trabaho</li>
+                  <li>Harassment o pambabastos</li>
+                </ul>
+                <p><strong>Law:</strong> RA 7277, RA 9442, RA 10754</p>
+
+                <h3>Reasonable Accommodation</h3>
+                <p>
+                  Dapat magbigay ang employer ng reasonable accommodation para
+                  makapagtrabaho nang maayos ang PWD.
+                </p>
+                <ul>
+                  <li>Flexible o modified work schedule</li>
+                  <li>Assistive devices</li>
+                  <li>Accessible workspace</li>
+                  <li>Sign language interpreter</li>
+                  <li>Adjusted tasks ayon sa kakayahan</li>
+                </ul>
+                <p><strong>Law:</strong> RA 7277, BP 344</p>
+
+                <h3>Accessible Workplace</h3>
+                <ul>
+                  <li>Rampa at handrails</li>
+                  <li>Accessible na banyo</li>
+                  <li>Ligtas at maluwag na daanan</li>
+                  <li>Maayos na ilaw</li>
+                </ul>
+                <p><strong>Law:</strong> BP 344, RA 7277</p>
+
+                <h3>Government Employment Quota</h3>
+                <p>
+                  At least <strong>1% ng government positions</strong> ay
+                  naka-reserve para sa qualified PWDs.
+                </p>
+                <p><strong>Law:</strong> RA 10524</p>
+
+                <h3>Tax Incentives for Employers</h3>
+                <ul>
+                  <li>Additional tax deductions</li>
+                  <li>Deductions para sa accessibility improvements</li>
+                </ul>
+                <p><strong>Law:</strong> RA 10754</p>
+              </section>
+
+              <!-- Employee Rights -->
+              <section class="mb-5">
+                <h2>Employee Rights</h2>
+
+                <h3>Equal Salary & Benefits</h3>
+                <ul>
+                  <li>Pantay na sahod</li>
+                  <li>SSS</li>
+                  <li>PhilHealth</li>
+                  <li>Pag-IBIG</li>
+                  <li>Leave benefits</li>
+                </ul>
+                <p><strong>Law:</strong> RA 7277</p>
+
+                <h3>Respect & Privacy</h3>
+                <ul>
+                  <li>Bawal ang bullying at harassment</li>
+                  <li>
+                    Hindi required ang disability disclosure kung hindi
+                    kailangan
+                  </li>
+                  <li>Protektado ang medical at personal information</li>
+                </ul>
+                <p><strong>Law:</strong> RA 7277, RA 9442</p>
+              </section>
+
+              <!-- Rights During Job Application -->
+              <section class="mb-5">
+                <h2>Rights During Job Application</h2>
+                <ul>
+                  <li>Accessible job postings</li>
+                  <li>Fair at non-discriminatory interview</li>
+                  <li>Reasonable accommodation during interview</li>
+                  <li>Optional disability disclosure</li>
+                </ul>
+                <p><strong>Law:</strong> RA 7277, RA 10524</p>
+              </section>
+
+              <!-- Employer Responsibilities -->
+              <section class="mb-5">
+                <h2>Employer Responsibilities</h2>
+                <ul>
+                  <li>Magbigay ng equal opportunities</li>
+                  <li>Walang discrimination sa hiring at promotion</li>
+                  <li>Mag-offer ng reasonable accommodation</li>
+                  <li>Panatilihing accessible ang workplace</li>
+                  <li>Pantay na sahod at benepisyo</li>
+                  <li>Protektahan ang privacy ng empleyado</li>
+                </ul>
+              </section>
+
+              <!-- PWD Success Stories -->
+              <section class="mb-5">
+                <h2>PWD Success Stories</h2>
+                <ul>
+                  <li>
+                    Deaf IT employee na na-promote dahil may sign language
+                    interpreter
+                  </li>
+                  <li>Blind massage therapist na trained ng TESDA</li>
+                  <li>Wheelchair user na na-hire sa LGU gamit ang 1% quota</li>
+                </ul>
+              </section>
+
+              <!-- How to Report Violations -->
+              <section class="mb-5">
+                <h2>How to Report Violations</h2>
+                <ul>
+                  <li><strong>DOLE</strong> – workplace discrimination</li>
+                  <li><strong>CHR</strong> – human rights violations</li>
+                  <li><strong>NCDA</strong> – PWD concerns</li>
+                  <li><strong>LGU PDAO</strong> – local assistance</li>
+                </ul>
+
+                <h3>Steps to Report:</h3>
+                <ol>
+                  <li>I-document ang nangyari</li>
+                  <li>Mag-collect ng ebidensya</li>
+                  <li>Mag-file ng complaint sa tamang ahensya</li>
+                </ol>
+              </section>
+
+              <!-- Other Rights You Should Know -->
+              <section class="mb-5">
+                <h2>Other Rights You Should Know</h2>
+
+                <h3>Education</h3>
+                <ul>
+                  <li>Interpreter para sa Deaf students</li>
+                  <li>SPED support</li>
+                  <li>Modified lessons o materials</li>
+                </ul>
+
+                <h3>Healthcare</h3>
+                <ul>
+                  <li>Affordable medical services</li>
+                  <li>Rehabilitation programs</li>
+                  <li>PhilHealth coverage</li>
+                </ul>
+
+                <h3>Discounts & Privileges</h3>
+                <ul>
+                  <li>20% discount + VAT exemption</li>
+                  <li>5% discount sa basic necessities</li>
+                </ul>
+
+                <h3>Government Assistance</h3>
+                <ul>
+                  <li>Financial assistance</li>
+                  <li>Livelihood programs</li>
+                  <li>Mobility aids (wheelchair, saklay, atbp.)</li>
+                </ul>
+              </section>
+            </section>
+          </main>
+          <!-- ============ END OF EMPLOYMENT AND LEGAL RIGHTS ====== -->
 
           <!-- ============ END OF BENEFITS AND DISCOUNTS  ====== -->
         </div>
       </div>
       <!----- END OF PAGE CONTENTS ----->
-      
     </div>
     <!----- END OF PAGE BODY ------>
-    
-
-   
 
     <!---------------- SCRIPTS ----------------->
     <script src="scrollToTop.js"></script>
     <script src="script.js"></script>
-
   </body>
 </html>

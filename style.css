@@ -9,28 +9,43 @@
 }
 
 :root {
-    --color-text-primary: #1f2936;
-    --color-text-placeholder: #798eae ;
-    --color-bg-primary: #f9fafb;
-    --color-bg-secondary: #ececfd;
-    --color-bg-sidebar: #ffffff ;
-    --color-border-hr: #e2e8f0;
-    --color-hover-primary: #695cfe;
-    --color-hover-secondary: #e2e2fb;
-    --color-shadow: rgba(0,0,0,0.05);
+  --color-text-primary: #1E1E1E;        /* high-contrast readable text */
+  --color-text-placeholder: #6B7280;    /* softer but still visible */
+  --color-bg-primary: #FAFAF5;          /* soft light background */
+  --color-bg-secondary: #F1F3F9;        /* gentle section contrast */
+  --color-bg-sidebar: #FFFFFF;          /* clean navigation area */
+  --color-border-hr: #D1D5DB;           /* visible but not harsh */
+  --color-hover-primary: #F6C344;       /* deep accessible blue */
+  --color-hover-secondary: #E6EBF5;     /* calm hover background */
+  --color-shadow: rgba(0,0,0,0.05);
 }
 
 body {
     background: var(--color-bg-primary);
 }
 
+br {
+        line-height: 150%;
+}
+
+.page-badge {
+      display: inline-block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-text-primary);
+      background: #ffe9a3;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
 
 /***** START OF SIDEBAR & SITE BAR *****/
 .sidebar {
     position: sticky;
     top: 0;
     height: 100vh;
-    width: 340px;
+    width: 360px;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -110,7 +125,7 @@ body {
 
 .sidebar .sidebar-content {
     flex: 1;
-    padding: 20px 18px;
+    padding: 20px 0px;
     overflow: hidden auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color-text-placeholder) transparent;
@@ -126,6 +141,7 @@ body {
     display: flex;
     padding: 0 15px;
     margin: 5px 0 20px;
+    
     align-items: center;
     white-space: nowrap;
     background: var(--color-bg-secondary);
@@ -172,7 +188,8 @@ body {
     align-items: center;
     gap: 12px;
     white-space: nowrap;
-    padding: 12px 15px;
+    padding: 12px 10px;
+    margin-right: 10px;
     border-radius: 8px;
     color: var(--color-text-primary);
     transition: 0.3s ease;
@@ -229,15 +246,16 @@ body {
 }
 /***** END OF SIDEBAR & SITE BAR *****/
 
-.container-fluid {
+.layout-wrapper {
     display: flex;
+
 }
 
-.container-fluid .main-content {
+.layout-wrapper .main-content {
     flex: 1;
     padding: 30px;
     color: var(--color-text-primary);
-}
+} 
 
 .main-content .page-title {
     font-size: 1.5rem;
@@ -482,7 +500,7 @@ input[type="submit"] {
 }
 /* Search results dropdown styling */
 #results {
-  position: fixed;
+  position: sticky;
   top: 70px;
   right: 10px;
   width: calc(100% - 20px);
@@ -518,7 +536,7 @@ input[type="submit"] {
 }
 
 .search-results-list a {
-  color: #0066cc;
+  color: #F6C344;
   text-decoration: none;
   font-weight: 500;
 }
@@ -531,4 +549,58 @@ mark {
   background-color: #ffff00;
   padding: 2px 4px;
   border-radius: 3px;
+}
+
+/* ==== start liezel (BENEFITS) ==== */
+
+.benefit-card
+{
+  max-width: 960px;
+  margin: 12px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px 22px 18px 22px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+} 
+
+.benefit2-card
+{
+  max-width: 960px;
+  margin: 12px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px 22px 18px 22px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.benefit3-card
+{
+  max-width: 960px;
+  margin: 12px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px 22px 18px 22px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.reminder-card
+{
+  max-width: 960px;
+  margin: 12px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px 22px 18px 22px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  bottom: 12px auto;
+}
+
+.icon-img {
+  width: 40px;
+  height: 40px; 
+  object-fit: contain;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 3rem;
 }

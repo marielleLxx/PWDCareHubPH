@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>PWD ID Application Guide</title>
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
@@ -27,7 +22,7 @@
       </button>
     </nav>
 
-    <div class="container-fluid">
+    <div class="layout-wrapper">
       <!----- START OF SIDEBAR NAV ------>
       <aside class="sidebar">
         <header class="sidebar-header">
@@ -100,12 +95,52 @@
             </li>
           </ul>
           <!-- SEARCH FORM -->
-          <form action="#" class="search-form">
-            <span class="material-symbols-rounded"
-              ><img src="media assets/search-interface-symbol.png" class="icon"
-            /></span>
-            <input type="search" placeholder="Search..." required />
+           <form
+            class="search-form"
+            role="search"
+            onsubmit="performSearch(event)"
+            style="position: relative; width: 100%; max-width: 600px"
+          >
+            <div style="position: relative; flex: 1">
+              <input
+                class="form-control"
+                type="search"
+                id="searchInput"
+                placeholder="Search PWD services"
+                aria-label="Search PWD website"
+                onkeydown="handleKey(event)"
+                style="padding-right: 50px; width: 100%"
+              />
+              <button
+                class="btn"
+                type="button"
+                onclick="startVoiceSearch()"
+                aria-label="Voice search"
+                style="
+                  position: absolute;
+                  right: 8px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background: none;
+                  border: none;
+                  font-size: 18px;
+                  cursor: pointer;
+                  padding: 5px;
+                  z-index: 10;
+                "
+              >
+                🎤
+              </button>
+            </div>
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              aria-label="Submit search"
+            >
+              Search
+            </button>
           </form>
+          <div id="results" role="region" aria-live="polite"></div>
         </div>
       </aside>
       <!----- START OF SIDEBAR NAV ------>
@@ -117,6 +152,7 @@
           <div>
             <header class="page-header">
               <div class="step-list">
+                <span class="page-badge">FOR MANDALUYONG CITY RESIDENTS</span>
                 <h1 class="page-title">PWD ID Application Guide</h1>
                 <p class="page-description">
                   Para sa mga <strong>Mandaluyong City residents</strong> na
@@ -323,5 +359,6 @@
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scrollToTop.js"></script>
     <script src="script.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>
