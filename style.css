@@ -553,6 +553,17 @@ mark {
   border-radius: 3px;
 }
 
+.btn-outline-success {
+  background-color: #ffffff;
+  color: var(--color-text-placeholder);
+  border: 2px solid #4460AA;
+}
+.btn-outline-success:hover {
+  background-color: #4460AA;
+  color: #ffffff;
+  border: 2px solid #4460AA;
+}
+
 /* ==== start liezel (BENEFITS) ==== */
 
 .benefit-card
