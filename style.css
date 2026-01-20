@@ -391,6 +391,7 @@ br {
   border-radius: 16px;
   padding: 22px 22px 18px 22px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  gap: 12px;
 }
 
 .step {
@@ -467,7 +468,7 @@ br {
 .field label {
   display: block;
   font-size: 12px;
-  color: #777;
+  color: var(--color-bg-sidebar);
 }
 
 .field input {
@@ -496,7 +497,8 @@ input[type="submit"] {
   border-style: solid;
   border-color: gray;
   border-radius: 10px;
-  background-color: rgba(116, 112, 112, 0.5);
+  color: var(--color-bg-sidebar);
+  background-color: rgba(65, 64, 64, 0.555);
 }
 /* Search results dropdown styling */
 #results {
