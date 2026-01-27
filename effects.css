@@ -1,0 +1,48 @@
+/* ===== Scroll Animation Card ===== */
+.text-card {
+    opacity: 0;
+    transform: scale(0.9);
+    visibility: hidden;
+
+    transition:
+        opacity 0.6s ease,
+        filter 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        visibility 0s linear 0.6s;
+}
+
+/* Visible on scroll */
+.text-card.is-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    visibility: visible;
+
+    transition:
+        opacity 0.6s ease,
+        filter 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hover magnify – toned down for readability */
+.text-card.is-visible:hover {
+    transform: scale(1.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    z-index: 10;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .text-card.is-visible:hover {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-card {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
