@@ -459,6 +459,15 @@ br {
   padding: 20px; /* space for fixed navbar */
 }
 
+/* home background */
+.home-background  {
+  /* background-color: #F1F3F9; */
+  color: #1b3a57;
+  padding: 20px; 
+  /* space for fixed navbar */
+}
+
+
 
 /* form styling */
 .field {
