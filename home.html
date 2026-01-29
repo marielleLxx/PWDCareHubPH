@@ -1,13 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
-
 
   <body>
     <!----- site navbar ----->
@@ -38,8 +42,6 @@
         </header>
 
         <div class="sidebar-content">
-          
-
           <!-- MENU LIST -->
           <ul class="menu-list">
             <li class="menu-item">
@@ -94,13 +96,12 @@
             </li>
           </ul>
           <!-- SEARCH FORM -->
-           <form
+          <form
             class="search-form"
             role="search"
             onsubmit="performSearch(event)"
             style="position: relative; width: 100%; max-width: 600px"
           >
-
             <div style="position: relative; flex: 1">
               <input
                 class="form-control"
@@ -141,8 +142,24 @@
             </button>
           </form>
           <div id="results" role="region" aria-live="polite"></div>
+
+          <div class="menu-item footer-section" style="position: absolute; bottom: 0">
+            <a
+              href="/"
+              class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+              style="padding-left: 20px;"
+              aria-label="Bootstrap"
+            >
+              <img
+                src="media assets/logo.png"
+                alt="PWD Care Hub PH logo"
+                width="50"
+                height="50"
+              />
+            </a>
+            <span class="menu-label">&copy; 2026 PWD Care Hub PH</span>
+          </div>
         </div>
-        
       </aside>
       <!----- END OF SIDEBAR NAV ------>
 
@@ -152,54 +169,115 @@
           <!-- ============ START OF STEP BY STEP PROCESS ====== -->
           <div>
             <!-------------------------- HEADER BANNER -------------------------->
-              <img
-                src="media assets/background.png"
-                alt="PWD Banner"
-                class="home-banner"
-              />
-              <!-------------------------- END HEADER BANNER ---------------------------> 
+            <img
+              src="media assets/background.png"
+              alt="PWD Banner"
+              class="home-banner"
+            />
+            <!-------------------------- END HEADER BANNER --------------------------->
 
             <header class="page-header">
-              
-
               <div class="step-list text-card">
-                <h1 class="page-title">Welcome to Mandaluyong PWD Care Hub Ph</h1>
+                <h1 class="page-title">
+                  Welcome to Mandaluyong PWD Care Hub Ph
+                </h1>
               </div>
             </header>
 
             <section class="step-list text-card">
-              <span> 
-                <strong>PWD Care Hub PH</strong> is an accessible and inclusive information platform created to support <strong>Persons with Disabilities (PWDs)</strong> living in Mandaluyong City.
+              <span>
+                <strong>PWD Care Hub PH</strong> is an accessible and inclusive
+                information platform created to support
+                <strong>Persons with Disabilities (PWDs)</strong> living in
+                Mandaluyong City.
               </span>
-              <span><hr style="visibility:hidden">
-                This website was developed to help PWD residents, their families, and caregivers easily find accurate, updated, and easy-to-understand information about government services, benefits, discounts, and local assistance programs.
+              <span
+                ><hr style="visibility: hidden" />
+                This website was developed to help PWD residents, their
+                families, and caregivers easily find accurate, updated, and
+                easy-to-understand information about government services,
+                benefits, discounts, and local assistance programs.
               </span>
-              <span><hr style="visibility:hidden">
-                Our mission is to promote awareness, inclusion, and empowerment by ensuring that PWD residents of Mandaluyong can clearly understand their rights and make full use of the benefits provided to them under national laws and city policies.
+              <span
+                ><hr style="visibility: hidden" />
+                Our mission is to promote awareness, inclusion, and empowerment
+                by ensuring that PWD residents of Mandaluyong can clearly
+                understand their rights and make full use of the benefits
+                provided to them under national laws and city policies.
               </span>
-              <span><hr style="visibility:hidden">
+              <span
+                ><hr style="visibility: hidden" />
                 <strong>This platform also supports:</strong>
               </span>
-              <ul>  
+              <ul>
                 <li>Step-by-step guides for PWD ID application and renewal</li>
                 <li>Explanations of benefits and discounts</li>
                 <li>Updates on Mandaluyong City PWD programs and services</li>
-                <li>Access to healthcare, social protection, and livelihood information</li>
+                <li>
+                  Access to healthcare, social protection, and livelihood
+                  information
+                </li>
                 <li>Community resources and referral support</li>
               </ul>
-              <span class="page-badge" style="align-items: center;">
-                <b>PWD Care Hub PH is here to guide you, support you, and stand with you.</b></span>
+              <span class="page-badge" style="align-items: center">
+                <b
+                  >PWD Care Hub PH is here to guide you, support you, and stand
+                  with you.</b
+                ></span
+              >
             </section>
 
-            
+            <div
+              class="fb-container"
+              style="text-align: center; margin: 20px 0"
+            >
+              <h3>Mga Latest na Balita mula sa National Council on Disability Affairs</h3>
+
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fncdagovph&tabs=timeline&width=960&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="500"
+                height="600"
+                style="
+                  border: none;
+                  overflow: hidden;
+                  border-radius: 10px;
+                  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                "
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  picture-in-picture;
+                  web-share;
+                "
+              >
+              </iframe>
+
+              <p style="margin-top: 10px; font-size: 0.9em">
+                <i
+                  >Hindi makita ang feed?
+                  <a
+                    href="https://www.facebook.com/MandaluyongPIO"
+                    target="_blank"
+                    >I-click dito para sa Official Facebook Page.</a
+                  ></i
+                >
+              </p>
+            </div>
 
             <section class="highlight-box">
               <p class="highlight-text">
-                Tip: If you are not sure where to start, visit the PWD ID Application Guide page first.
-                It contains the basic process that most persons with disabilities and their families usually need.
+                Tip: If you are not sure where to start, visit the PWD ID
+                Application Guide page first. It contains the basic process that
+                most persons with disabilities and their families usually need.
               </p>
               <a href="pwdIdApp.html">
-                <button class="highlight-cta">Go to ID Application Guide</button>
+                <button class="highlight-cta">
+                  Go to ID Application Guide
+                </button>
               </a>
             </section>
           </div>
@@ -208,9 +286,6 @@
       </div>
       <!----- END OF PAGE CONTENTS ----->
     </div>
-
-    
-
 
     <!------- SCROLL TO TOP BUTTON --------->
     <button id="go-to-top-button" class="btn hidden">Go to Top</button>
