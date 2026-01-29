@@ -70,9 +70,29 @@ br {
 .icon {
     height: 24px;
     width: 24px;
-
-    
 }
+
+.qr-code-img {
+  width: 140px;
+  height: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .qr-code-img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .qr-code-img {
+    width: 80px;
+    height: auto;
+    width: 100%;
+  }
+}
+
 .sidebar-header .header-logo {
     width: 46px;
     height: 46px;
