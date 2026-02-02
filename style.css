@@ -308,6 +308,7 @@ br {
   cursor: pointer;
   box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.2s linear;
+  z-index: 1001;
 }
 
 #go-to-top-button:hover {
