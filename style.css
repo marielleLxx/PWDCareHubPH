@@ -140,11 +140,12 @@ br {
 
 .sidebar-header .sidebar-toggle span {
     font-size: 1.75rem;
+    transition: transform 0.4s ease;
 }
 
 .sidebar.collapsed .sidebar-toggle span {
     font-size: 1.75rem;
-    transition: transform 0.4s  ease;
+    transform: rotate(180deg);
 }
 
 .sidebar .sidebar-content {
